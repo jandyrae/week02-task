@@ -1,25 +1,25 @@
 #include <iostream>
 #include <string>
 #include <stdlib.h>
-#include "Account.h";
-#include "Account.cpp"
-
+#include "Account.h"
 using std::cout;
 using std::cin;
 using std::endl;
 using namespace std;
 using bank_account_info::Account;
+
 int main()
 {
 	int option;
-	string account_name;
-	float account_balance, deposit, withdrawl;
+	// string account_name;
+	float deposit{}, withdrawl{};
 	bool open_transaction = true;
 	Account new_account;
 
-	new_account.account_info(account_name, account_balance);
+	new_account.account_info();
 	
 	while (open_transaction) {
+		
 		cout << endl << "Account menu: ";
 		cout << endl << "0. Quit Program";
 		cout << endl << "1. Display Account Information";
@@ -55,4 +55,5 @@ int main()
 			break;
 		}
 	}
+	
 }

@@ -2,21 +2,26 @@
 #include <stdlib.h>
 #include <string>
 #include <iostream>
-#include<iomanip>
+#include <iomanip>
+
 using namespace std;
 
 namespace bank_account_info {
 	class Account {
 	private:
-		static int account_ID; // how to increment and hold last value - static?
-		int	num = 0; 
+		int account_ID; // how to increment and hold last value - static?
 		string account_name;
 		float account_balance;
 
 	public:
 		Account();
-		void account_info(string, float);
-		string account_display(void);
+		// void set_account_name(string account_name);
+		// void set_account_balance(float account_balance);
+		// string get_account_name() const;
+		// float get_account_balance();
+		// int get_account_id();
+		void account_info(void);
+		void account_display(void);
 		void account_deposit(float);
 		void account_withdrawl(float);
 	};
