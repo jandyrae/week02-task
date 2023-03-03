@@ -1,8 +1,8 @@
 #include "Account.h"
 using bank_account_info::Account;
-// int Account::account_ID = 0;
+int Account::next_ID = 1;
 
-Account::Account() : account_ID {}, account_name {}, account_balance {} {}
+Account::Account() : account_ID {0},  account_name {}, account_balance{0.0} {}
 	// The account class will have a constructor that takes no parameters. 
 	// This constructor will initialize the data members to empty values.
 	//account_name = "";
@@ -36,12 +36,13 @@ void Account::account_info()
 //	Account::set_account_name(account_name);
 //	Account::get_account_balance();
 	// method that prompts the user to enter the name and the initial balance
-	int num = 1;
+	
 	cout << "Enter the name: ";
 	cin >> account_name;
 	cout << endl << "Enter the balance: ";
 	cin >> account_balance;
-	account_ID += num++;
+	account_ID = next_ID++;
+	// cout << account_ID << endl; // debug line to show what account_ID was saved as
 }
 /*
 int Account::get_account_id() 
@@ -50,7 +51,7 @@ int Account::get_account_id()
 	account_ID += num++;
 	return account_ID ;
 }*/
-void Account::account_display()
+void Account::account_display() const
 {
 	cout.setf(ios::fixed);
 	cout.setf(ios::showpoint);

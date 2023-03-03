@@ -12,6 +12,7 @@ namespace bank_account_info {
 		int account_ID; // how to increment and hold last value - static?
 		string account_name;
 		float account_balance;
+		static int next_ID;
 
 	public:
 		Account();
@@ -20,10 +21,11 @@ namespace bank_account_info {
 		// string get_account_name() const;
 		// float get_account_balance();
 		// int get_account_id();
+
 		void account_info(void);
-		void account_display(void);
-		void account_deposit(float);
-		void account_withdrawl(float);
+		void account_display(void) const;
+		void account_deposit(float deposit);
+		void account_withdrawl(float withdrawl);
 	};
 }
 
