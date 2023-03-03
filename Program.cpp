@@ -11,7 +11,6 @@ using bank_account_info::Account;
 int main()
 {
 	int option;
-	// string account_name;
 	float deposit{}, withdrawl{};
 	bool open_transaction = true;
 	Account new_account;
@@ -30,23 +29,23 @@ int main()
 		switch (option)
 		{
 		case 0:
-			// User chooses menu option '0' - Program should quit
+			// option '0' - Program should quit
 			cout << "\nThank you for visiting our bank. \nCome back soon! \n";
 			open_transaction = false;
 			break;
 
 		case 1:
-			// User chooses menu option '1' - Program should display account information
+			// option '1' - Program should display account information
 			new_account.account_display();
 			break;
 
 		case 2:
-			// User chooses menu option '2' - Program should prompt for a deposit amount
+			// option '2' - Program should prompt for a deposit amount
 			new_account.account_deposit(deposit);
 			break;
 
 		case 3:
-			// User chooses menu option '3' - Program should prompt for a withdrawal amount
+			// option '3' - Program should prompt for a withdrawal amount
 			new_account.account_withdrawl(withdrawl);
 			break;
 
